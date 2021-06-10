@@ -5,3 +5,15 @@
 .cursor-pointer {
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .MuiTypography-h5 {
+        font-size: 16px !important;
+    }
+    .MuiCardContent-root span {
+        font-size: 16px !important;
+    }
+    .MuiCardContent-root .date {
+        font-size: 14px !important;
+    }
+}

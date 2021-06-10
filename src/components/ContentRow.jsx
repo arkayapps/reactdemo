@@ -67,12 +67,12 @@ const ContentRow = (props) => {
                         {props.title}
                     </Typography>
                     <Row>
-                        <Col md={6} xs={6} className="d-flex">
+                        <Col md={6} xs={12} className="d-flex">
                             <Avatar alt="BKS" src={props.image} className="mt-2" />
                             <span className="ml-2 mt-3">{props.author}</span>
                         </Col>
-                        <Col md={6} xs={6} className="text-right">
-                            <span className="mt-3">{timestampToDateTimeString(props.date)}</span>
+                        <Col md={6} xs={12} className="text-right">
+                            <span className="date mt-3">{timestampToDateTimeString(props.date)}</span>
                         </Col>
                     </Row>
                 </CardContent>
