@@ -1,9 +1,21 @@
+.App {
+    text-align: center;
+}
+
 .MuiPaper-elevation1:hover {
     box-shadow: 0px 2px 10px #848485;
 }
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.dark {
+    background-color: #303030 !important;
+}
+
+.light {
+    background-color: #fafafa !important;
 }
 
 @media (max-width: 768px) {

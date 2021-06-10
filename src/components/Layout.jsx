@@ -3,17 +3,19 @@ import React from 'react';
 import {
     AppBar,
     Container,
+    IconButton,
     makeStyles,
     Toolbar,
+    Tooltip,
     Typography
 } from '@material-ui/core';
+
+import Brightness4Icon from '@material-ui/icons/Brightness4'
+import Brightness7Icon from '@material-ui/icons/Brightness7'
 
 import Content from './Content';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        flexGrow: 1,
-    },
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -26,8 +28,10 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Layout = () => {
+const Layout = (props) => {
     const classes = useStyles();
+
+    const lightButton = (props.darkState) ? (<Tooltip title="Light"><Brightness7Icon style={{ color: "white" }} /></Tooltip>) : (<Tooltip title="Dark"><Brightness4Icon style={{ color: "white" }} /></Tooltip>)
 
     return (
         <div>
@@ -36,6 +40,9 @@ const Layout = () => {
                     <Typography variant="h6" className={classes.title}>
                         StackOverFlow
                     </Typography>
+                    <IconButton onClick={props.handleThemeChange}>
+                        {lightButton}
+                    </IconButton>
                 </Toolbar>
             </AppBar>
             <Container maxWidth="lg" className={classes.contentContainer}>
